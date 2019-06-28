@@ -1,2 +1,2 @@
 # anonypy
-A handy script to anonymize strings.
+A handy Python script to anonymize strings.
