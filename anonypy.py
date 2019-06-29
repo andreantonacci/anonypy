@@ -11,8 +11,6 @@ def anonymize():
     digest.set(hash_obj.hexdigest()) # Set output to digest
 
 
-# print('9834876dcfb05cb167a5c24953eba58c4ac89b1adf57f28f2f9d09af107ee8f0') # Double check for aaa
-
 root = Tk()
 root.title("Anonypy")
 
@@ -26,11 +24,9 @@ digest = StringVar()
 
 text_entry = ttk.Entry(mainframe, width=10, textvariable=raw_text)
 text_entry.grid(column=2, row=1, sticky=(W, E))
-
 # ttk.Label(mainframe, textvariable=digest).grid(column=2, row=2, sticky=(W, E)) # Not selectable digest
-output = Entry(mainframe, textvariable=digest, fg="black", bg="white", bd=0, width=64, state="readonly").grid(column=2, row=2, sticky=(W, E))
+output = Entry(mainframe, textvariable=digest, fg="black", bg="white", bd=0, width=64, state="readonly").grid(column=2, row=2, sticky=(W, E)) # Selectable digest
 ttk.Button(mainframe, text="Anonymize", command=anonymize).grid(column=2, row=3, sticky=E)
-
 ttk.Label(mainframe, text="String to anonymize:").grid(column=1, row=1, sticky=W)
 ttk.Label(mainframe, text="Digest:").grid(column=1, row=2, sticky=E)
 
@@ -38,6 +34,5 @@ for child in mainframe.winfo_children(): child.grid_configure(padx=5, pady=5)
 
 text_entry.focus()
 root.bind('<Return>', anonymize)
-
 root.mainloop()
 root.destroy()
