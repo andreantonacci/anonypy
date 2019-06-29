@@ -3,7 +3,7 @@ from tkinter import ttk
 from Cryptodome.Hash import SHA256
 
 
-def anonymize():
+def anonymize(*args):
     string = text_entry.get() # Get the value from text_entry
     hash_obj = SHA256.new(data=string.encode('utf-8'))
     # When should I update?
