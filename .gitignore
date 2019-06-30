@@ -10,8 +10,8 @@
 .idea/**/dictionaries
 .idea/**/shelf
 
-# Ignore hidden salt
-salt.txt
+# Ignore hidden pepper
+pepper.txt
 
 # Generated files
 .idea/**/contentModel.xml
