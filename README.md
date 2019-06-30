@@ -1,7 +1,10 @@
 # anonypy
-A handy Python program to anonymize strings via hash functions (SHA-256).
+A handy Python program to anonymize strings via hash functions (SHA-256) -- not meant for passwords!
 
-Simply run `anonypy.py`.
+## Usage
+(Randomly) generate a salt and store it in a new file called `salt.txt` with one line only. Then simply run `anonypy.py`.
+
+Do not share the salt: it is meant to be private and generated only once. This is not suitable for storing passwords, but it is useful in those cases in which two identical strings must have the same hash. 
 
 ## Dependencies
 * [PyCryptodome](https://pypi.org/project/pycryptodome) is required. Run `pip install pycryptodomex`.
