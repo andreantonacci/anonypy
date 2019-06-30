@@ -4,11 +4,17 @@ from Cryptodome.Hash import SHA256
 
 
 def anonymize(*args):
-    string = text_entry.get() # Get the value from text_entry
+    # Get the input value from text_entry
+    string = text_entry.get()
+    # Retrieve hidden salt
+    f = open('salt.txt', 'r', encoding='utf-8')
+    salt = f.readlines()
     hash_obj = SHA256.new(data=string.encode('utf-8'))
-    # When should I update?
-    hash_obj.update(b'')
-    digest.set(hash_obj.hexdigest()) # Set output to digest
+    # Update hash adding salt
+    hash_obj.update(salt[0].encode('utf-8'))
+    # Set output to digest
+    digest.set(hash_obj.hexdigest())
+    f.close()
 
 
 root = Tk()
