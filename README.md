@@ -1,4 +1,4 @@
-# anonypy
+# Anonypy
 A handy Python program to anonymize strings via hash functions (SHA-256) -- not meant for passwords!
 
 ## Usage
